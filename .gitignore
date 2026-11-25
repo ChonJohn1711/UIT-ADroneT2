@@ -1,0 +1,292 @@
+# ============================================================
+# KLTN — AI / Deep Learning research monorepo
+# Keep source code, configs, documentation and lightweight metadata.
+# ============================================================
+
+# 1. Python bytecode, build and test caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyre/
+.hypothesis/
+.tox/
+.nox/
+.cache/
+.eggs/
+*.egg-info/
+*.egg
+build/
+dist/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+
+# 2. Virtual environments / local dependencies
+.venv/
+venv/
+env/
+ENV/
+conda_envs/
+.conda/
+.python-version
+node_modules/
+
+# 3. Dataset payloads — common storage directories
+# Do NOT ignore Gen_Dataset/, datasets/, dataset/ or pretrained/
+# wholesale: upstream repositories may store Python source there.
+raw_data/
+raw_datasets/
+processed_data/
+processed_datasets/
+augmented_data/
+generated_data/
+generated_datasets/
+dataset_cache/
+dataset_downloads/
+**/data/raw/
+**/data/processed/
+**/data/train/
+**/data/val/
+**/data/test/
+**/data/videos/
+**/data/images/
+**/data/frames/
+**/datasets/raw/
+**/datasets/processed/
+**/datasets/train/
+**/datasets/val/
+**/datasets/test/
+**/datasets/videos/
+**/datasets/images/
+**/datasets/frames/
+extracted_frames/
+all_classes/
+source_disjoint_v1/
+train_val_test/
+UCF101/
+HMDB51/
+Kinetics400/
+Kinetics600/
+Kinetics700/
+UIT_ADrone/
+UIT-ADrone/
+UIT_ADroneT2/
+UIT-ADroneT2/
+
+# Common video, image and audio payloads
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.mpeg
+*.mpg
+*.m4v
+*.wmv
+*.flv
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+*.tif
+*.tiff
+*.gif
+*.wav
+*.mp3
+*.flac
+*.m4a
+
+# Serialized datasets, features and caches
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.lmdb
+*.mdb
+*.parquet
+*.arrow
+*.feather
+*.tfrecord
+*.tfrecords
+*.pkl
+*.pickle
+*.joblib
+*.mat
+*.bin
+*.dat
+
+# 4. Model checkpoints, pretrained weights and model exports
+checkpoint/
+checkpoints/
+.ckpt/
+weights/
+model_weights/
+pretrained_weights/
+saved_models/
+model_cache/
+huggingface_cache/
+torch_cache/
+*.pt
+*.pth
+*.pth.tar
+*.ckpt
+*.safetensors
+*.onnx
+*.engine
+*.trt
+*.tflite
+*.keras
+*.gguf
+*.ggml
+*.caffemodel
+*.pdparams
+*.pb
+*.pdmodel
+*.pdiparams
+*.weights
+*.pdopt
+*.params
+*.msgpack
+*.index
+*.data-?????-of-?????
+
+# 5. Training / inference outputs and experiment tracking
+runs/
+outputs/
+output/
+logs/
+log/
+wandb/
+mlruns/
+mlartifacts/
+tb_logs/
+tensorboard_logs/
+lightning_logs/
+training_logs/
+training_outputs/
+inference_outputs/
+predictions/
+visualizations/
+profiling/
+*.log
+*.log.*
+events.out.tfevents.*
+slurm-*.out
+slurm-*.err
+*.prof
+*.nsys-rep
+*.ncu-rep
+*.trace.json
+
+# 6. Downloads, archives and temporary files
+Downloads/
+downloads/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+
+# 7. Credentials and local configuration
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa
+id_ed25519
+credentials.json
+service-account.json
+secrets.json
+secrets.yaml
+secrets.yml
+.netrc
+.pypirc
+
+# 8. IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 9. Allow lightweight documentation images, not dataset images
+!docs/**/*.png
+!docs/**/*.jpg
+!docs/**/*.jpeg
+!docs/**/*.svg
+!docs/**/*.gif
+!docs/**/*.webp
+!**/docs/**/*.png
+!**/docs/**/*.jpg
+!**/docs/**/*.jpeg
+!**/docs/**/*.svg
+!**/docs/**/*.gif
+!**/docs/**/*.webp
+
+# Keep CSV / JSON / YAML / TXT by default: they can be configs,
+# manifests, split definitions, class mappings and reproducibility metadata.
+# Add exact paths for large metadata-only datasets if needed.
+
+# ==========================================
+# Additional model checkpoints
+# ==========================================
+*.pyth
+*.pt
+*.pth
+*.pth.tar
+*.ckpt
+*.safetensors
+*.weights
+*.onnx
+*.bin
+*.gguf
+*.t7
+*.h5
+*.hdf5
+*.pb
+*.engine
+
+# ==========================================
+# Dataset annotations and splits
+# ==========================================
+**/label_db/
+**/zs_label_db/
+**/datasets_splits/
+**/data/annotations/
+
+# ==========================================
+# Training artifacts
+# ==========================================
+**/checkpoint/
+**/checkpoints/
+**/saved_models/
+**/model_weights/
+**/wandb/
+**/runs/
+**/outputs/
+**/lightning_logs/
+
